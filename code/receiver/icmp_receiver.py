@@ -1,3 +1,3 @@
-import scapy
+from scapy.all import *
 
-# Implement your ICMP receiver here
+print(sniff(filter="icmp", count=1, prn=lambda p: p.show()))
